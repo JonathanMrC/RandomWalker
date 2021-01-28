@@ -1,0 +1,10 @@
+E:\Proyectos\RandomWalker\RandomWalker\bin\Debug\RandomWalker.exe.config
+E:\Proyectos\RandomWalker\RandomWalker\bin\Debug\RandomWalker.exe
+E:\Proyectos\RandomWalker\RandomWalker\bin\Debug\RandomWalker.pdb
+E:\Proyectos\RandomWalker\RandomWalker\obj\Debug\RandomWalker.csprojAssemblyReference.cache
+E:\Proyectos\RandomWalker\RandomWalker\obj\Debug\RandomWalker.Form1.resources
+E:\Proyectos\RandomWalker\RandomWalker\obj\Debug\RandomWalker.Properties.Resources.resources
+E:\Proyectos\RandomWalker\RandomWalker\obj\Debug\RandomWalker.csproj.GenerateResource.cache
+E:\Proyectos\RandomWalker\RandomWalker\obj\Debug\RandomWalker.csproj.CoreCompileInputs.cache
+E:\Proyectos\RandomWalker\RandomWalker\obj\Debug\RandomWalker.exe
+E:\Proyectos\RandomWalker\RandomWalker\obj\Debug\RandomWalker.pdb
