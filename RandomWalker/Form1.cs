@@ -19,6 +19,7 @@ namespace RandomWalker
         bool monochrome;
         int increase, cont, red, blue, green, turn;
 
+
         public Form1()
         {
             InitializeComponent();
@@ -26,10 +27,7 @@ namespace RandomWalker
             increase = 5;
             cont = turn = 0;
             //Creating the image
-            btmp = new Bitmap(pic_box.Width, pic_box.Height);
-            graphic = Graphics.FromImage(btmp);
-            graphic.Clear(Color.White);
-            pic_box.Image = btmp;
+            LoadGraphic();
             //Creating the walker
             one = new Walker(pic_box.Width, pic_box.Height, 2);
             r = new Random(new Random(846213213).Next());
@@ -38,34 +36,46 @@ namespace RandomWalker
             green = r.Next(20, 241);
             Simulation.Start();
         }
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            LoadGraphic();
+            one = new Walker(pic_box.Width, pic_box.Height, 2);
+        }
+
+        private void LoadGraphic()
+        {
+            btmp = new Bitmap(pic_box.Width, pic_box.Height);
+            graphic = Graphics.FromImage(btmp);
+            graphic.Clear(Color.White);
+            pic_box.Image = btmp;
+        }
 
         void Draw()
         {
             Pen x = new Pen(Color.Black);
-            switch (turn++)
+            switch (r.Next(0, 9)%3)
             {
                 case 0:
                     {
                         ++red;
-                        red %= 240;
+                        red %= 255;
                     }
                     break;
                 case 1:
                     {
                         ++blue;
-                        blue %= 240;
+                        blue %= 255;
                     }
                     break;
                 case 2:
                     {
                         ++green;
-                        green %= 240;
+                        green %= 255;
                     }
                     break;
             }
-            turn %= 3;
             if (!monochrome) x = new Pen(Color.FromArgb(red, green, blue));
-            graphic.DrawEllipse(x, one.X, one.Y, one.Radio, one.Radio);
+            graphic.DrawEllipse(x, one.X-one.Radio, one.Y-one.Radio, one.Radio*2, one.Radio*2);
             pic_box.Refresh();
         }
 

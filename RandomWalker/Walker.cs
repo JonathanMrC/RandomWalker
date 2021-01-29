@@ -29,27 +29,37 @@ namespace RandomWalker
 
         public void Walk(Random r)
         {
-            switch(r.Next(0, 4))
+            switch(r.Next(1, 5))
             {
-                case 0:
-                    X-=10;
-                    if (x <= radio) x = limitsX - radio;
-                    break;
-                case 3:
-                    X+= 10;
-                    if (x > limitsX-radio) x = radio;
-                    break;
                 case 1:
-                    Y-= 10;
-                    if (y <= radio) y = limitsY - radio;
+                    {
+                        X -= 10;
+                        if (X < radio) X = limitsX - radio;
+                    }
                     break;
                 case 2:
-                    Y+= 10;
-                    if (y > limitsY-radio) x = radio;
+                    {
+                        X += 10;
+                        if (X > (limitsX - radio)) X = radio;
+                    }
+                    break;
+                case 3:
+                    {
+                        Y -= 10;
+                        if (Y < radio) Y = limitsY - radio;
+                    }
+                    break;
+                case 4:
+                    {
+                        Y += 10;
+                        if (Y > (limitsY - radio)) Y = radio;
+                    }
                     break;
                 default:
-                    X = limitsX/2;
-                    Y = limitsY/2;
+                    {
+                        X = radio;
+                        Y = radio;
+                    }
                     break;
             }
         }

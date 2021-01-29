@@ -59,6 +59,7 @@
             this.Name = "Form1";
             this.Text = "RandomWalker";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pic_box)).EndInit();
             this.ResumeLayout(false);
